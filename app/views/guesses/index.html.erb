@@ -1,0 +1,77 @@
+<h1>
+  A Quick Puzzle to Test Your Problem Solving
+</h1>
+
+<p>
+  A short game sheds light on government policy, corporate America and why no one likes to be wrong.
+  <br>
+  <br>
+  Here’s how it works:
+  <br>
+  <br>
+  We’ve chosen a rule that some sequences of three numbers obey — and some do not. Your job is to guess what the rule is.
+  <br>
+  <br>
+  We’ll start by telling you that the sequence 2, 4, 8 obeys the rule:
+  <br>
+  <ul>
+    <li>
+      2, 4, 8 Obeys the rule
+    </li>
+  </ul>
+  Now it’s your turn. Enter a number sequence in the boxes below, and we’ll tell you whether it satisfies the rule or not. You can test as many sequences as you want.
+
+</p>
+
+<!-- Add the logic to show them their previous tries -->
+<ul>
+
+  <li> <%= @num_1 %> , <%= @num_2 %>, <%= @num_3 %>, <%= @outcome %> </li>
+
+</ul>
+
+<p>
+  Enter a sequence:
+</p>
+
+<form action = "/all_guesses">
+  <label for = "first">
+    First Number:
+  </label>
+  <input name = "a1" id = "first" type "text" placeholder = "The first number">
+
+  <label for = "second">
+    Second Number:
+  </label>
+  <input name = "a2" id = "second" type "text" placeholder = "The second number">
+
+  <label for = "third">
+    Third Number:
+  </label>
+  <input name = "a3" id = "third" type = "text" placeholder = "The third number">
+
+  <button>
+    Check
+  </button>
+</form>
+
+<hr>
+
+<p>
+  When you think you know the rule, describe it in words below and then submit your answer. Make sure you’re right; you won’t get a second chance.
+</p>
+
+<form action = "/show_answer">
+  <label for = "answer">
+    Your Answer:
+  </label>
+  <br>
+  <textarea name = "q" id = "answer"></textarea>
+  <button>
+    I think I know it
+  </button>
+</form>
+
+<hr>
+
+<a href = "X">Reset</a>
