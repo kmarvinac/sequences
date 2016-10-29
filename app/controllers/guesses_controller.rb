@@ -1,5 +1,14 @@
 class GuessesController < ApplicationController
   def index
+
+    g = Guess.new
+    g.num_1 = params["a1"]
+    g.num_2 = params["a2"]
+    g.num_3 = params["a3"]
+    g.save
+
+    @list = Guess.all
+
     @num_1 = params["a1"].to_i
     @num_2 = params["a2"].to_i
     @num_3 = params["a3"].to_i

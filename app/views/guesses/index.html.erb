@@ -23,12 +23,15 @@
 
 </p>
 
-<!-- Add the logic to show them their previous tries -->
-<ul>
+<% @list.each do |guess| %>
+  <li>
+    <%= guess.num_1 %>,
+    <%= guess.num_2 %>,
+    <%= guess.num_3 %>
+    <%= @outcome %>
+  </li>
 
-  <li> <%= @num_1 %> , <%= @num_2 %>, <%= @num_3 %>, <%= @outcome %> </li>
-
-</ul>
+<% end %>
 
 <p>
   Enter a sequence:
